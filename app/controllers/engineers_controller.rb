@@ -3,10 +3,7 @@ class EngineersController < ApplicationController
 
   # GET /engineers
   # GET /engineers.json
-def set_engineer
-    @proyect = Proyect.find(params[:proyect_id]) # recupera el proyecto
-    @engineer = Engineer.find(params[:id]) if params[:id] # recupera el id solo si lo envian
-end
+
 
 
 def index
@@ -71,7 +68,8 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_engineer
-      @engineer = Engineer.find(params[:id])
+      @proyect = Proyect.find(params[:proyect_id]) # recupera el proyecto
+    @engineer = Engineer.find(params[:id]) if params[:id] # recupera el id solo si lo envian
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

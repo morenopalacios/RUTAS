@@ -37,6 +37,7 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_engineer_path,
+            <%= link_to t('.new', :default => t("helpers.links.new")),
+            new_proyect_engineer_path(@proyect),
             :class => 'btn btn-primary' %>
+
